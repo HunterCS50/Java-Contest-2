@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Read the number of elements in the array
+        int size = scanner.nextInt();
+
+        // Create an array to store the elements
+        int[] array = new int[size];
+
+        // Read the elements into the array
+        for (int i = 0; i < size; i++) {
+            array[i] = scanner.nextInt();
+        }
+
+        // Call the function to print unique elements
+        printUniqueElements(array);
+
+        scanner.close();
+    }
+
+    // Function to print unique elements
+    public static void printUniqueElements(int[] array) {
+        // Create an array to keep track of visited elements
+        boolean[] visited = new boolean[array.length];
+
+        // Loop through the elements
+        for (int i = 0; i < array.length; i++) {
+            if (!visited[i]) {
+                boolean isUnique = true;
+
+                // Check for duplicates in the remaining elements
+                for (int j = i + 1; j < array.length; j++) {
+                    if (array[i] == array[j]) {
+                        visited[j] = true;
+                        isUnique = false;
+                    }
+                }
+
+                // If the element is unique, print it
+                if (isUnique) {
+                    System.out.print(array[i] + " ");
+                }
+            }
+        }
+    }
+}
