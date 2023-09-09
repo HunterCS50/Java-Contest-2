@@ -1,0 +1,29 @@
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner in = new Scanner(System.in);
+
+        int n = in.nextInt();
+
+        ArrayList<Long> al = new ArrayList<>(n);
+
+        long sum = 0;
+
+        for (int i = 0; i < n; i++) {
+
+            long num = in.nextLong();
+
+            if (al.contains(num)) {
+                System.out.println(num);
+                break;
+            }
+            else
+            {
+                al.add(num);
+            }
+        }
+    }
+}
