@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int T = scanner.nextInt(); // Number of test cases
+
+        for (int t = 0; t < T; t++) {
+            int N = scanner.nextInt(); // Size of the friend group
+            int M = scanner.nextInt(); // Capacity of the course
+            int K = scanner.nextInt(); // Number of students already registered
+
+            if (N + K <= M) {
+                System.out.println("Yes");
+            } else {
+                System.out.println("No");
+            }
+        }
+
+        scanner.close();
+    }
+}
