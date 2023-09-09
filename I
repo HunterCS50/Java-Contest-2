@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int N = scanner.nextInt(); // Input the integer N
+
+        // Create the word "Gooood" with 'o' repeated N times
+        StringBuilder word = new StringBuilder("G");
+        for (int i = 0; i < N; i++) {
+            word.append('o');
+        }
+        word.append("d");
+
+        System.out.println(word.toString()); // Print the resulting word
+
+        scanner.close();
+    }
+}
