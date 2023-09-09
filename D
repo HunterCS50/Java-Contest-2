@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class ArraySum {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int T = scanner.nextInt(); // Number of test cases
+
+        for (int t = 0; t < T; t++) {
+            int N = scanner.nextInt(); // Size of the array
+            long sum = 0; // Initialize sum to 0
+
+            for (int i = 0; i < N; i++) {
+                long element = scanner.nextLong(); // Read each element
+                sum += element; // Add the element to the sum
+            }
+
+            System.out.println(sum); // Print the sum for this test case
+        }
+
+        scanner.close();
+    }
+}
