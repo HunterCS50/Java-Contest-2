@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        String S = scanner.nextLine().toLowerCase();
+        int vowelCount = 0;
+        int consonantCount = 0;
+
+        for (char c : S.toCharArray()) {
+            if (Character.isLetter(c)) {
+                if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+                    vowelCount++;
+                } else {
+                    consonantCount++;
+                }
+            }
+        }
+
+        System.out.println(vowelCount + " " + consonantCount);
+
+        scanner.close();
+    }
+}
