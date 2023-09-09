@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        String S = scanner.nextLine();
+        StringBuilder toggledString = new StringBuilder();
+
+        for (char c : S.toCharArray()) {
+            if (Character.isUpperCase(c)) {
+                toggledString.append(Character.toLowerCase(c));
+            } else if (Character.isLowerCase(c)) {
+                toggledString.append(Character.toUpperCase(c));
+            } else {
+                toggledString.append(c);
+            }
+        }
+
+        System.out.println(toggledString);
+
+        scanner.close();
+    }
+}
