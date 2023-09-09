@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int width = scanner.nextInt(); // Width of the rectangle
+        int length = scanner.nextInt(); // Length of the rectangle
+
+        // Print the top row
+        for (int i = 1; i <= width; i++) {
+            System.out.print("*");
+        }
+        System.out.println();
+
+        // Print the middle rows
+        for (int i = 2; i <= length - 1; i++) {
+            System.out.print("*");
+            for (int j = 2; j <= width - 1; j++) {
+                System.out.print(" ");
+            }
+            System.out.println("*");
+        }
+
+        // Print the bottom row
+        for (int i = 1; i <= width; i++) {
+            System.out.print("*");
+        }
+        System.out.println();
+
+        scanner.close();
+    }
+}
